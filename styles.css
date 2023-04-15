@@ -1,0 +1,320 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Open Sans', sans-serif;
+  }
+  
+  section{
+    text-align:center;
+  }
+  section:not(#home){
+    padding:20px
+  }
+  a{
+    text-decoration:none;
+  }
+  
+  html,body{
+    width:100%;
+    height:100%;
+  }
+  ul{
+    list-style:none
+  }
+  img{
+    width:100%;
+    height:100%;
+  }
+  
+  
+  /*********************** HOME ******************************/
+  #home{
+    position:relative;
+    height:100%;
+    width:100%;
+    overflow:hidden;
+    background:linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),url(hibachi\ header.jpeg);
+    background-size:cover;
+    
+    color:#fff;
+  }
+  
+  #home::after{
+    position:absolute;
+    content:'';
+    width:100%;
+    height:100%;
+    top:0;left:0;
+    background-color: #414a4f;
+    opacity: 0.50;
+  }
+  
+  /**************** header ******************/
+  header{
+    height:70px;
+    position:fixed;
+    z-index:3;
+    width:100%;
+    transition:0.5s;
+    overflow:hidden;
+  }
+  header a{
+    color:#fff;
+  }
+  header.open{
+    height:100%;
+    background: #171616f2;
+  }
+  header.scroll{
+    background:#fff;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    color:#333;
+  }
+  
+  header.scroll a{color:#333}
+  
+  /***** Topbar *****/
+  .topbar{
+    display:flex;
+    height:70px;
+    align-items:Center;
+  }
+  .logo{
+    flex:9;
+    padding-left:30px;
+  }
+  .toggle-button{
+    flex:1
+  }
+  .menu li{
+    padding:10px;
+  }
+  .menu li:hover a{
+    color: chocolate;
+  }
+  /****** intro *****/
+  .intro{
+    text-align:Center;
+    position:relative;
+    top: 80px;
+    z-index:2;
+  }
+  .intro h1{
+    font-size:32px;
+  }
+  .intro h4{
+    font-size:22px;
+    margin:20px 0;
+  }
+  .intro a{
+    width: 115px;
+    height: 25px;
+    background: #4E9CAF;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    line-height: 25px;
+  }
+
+  .intro p{
+    font-size:16px;
+    margin:20px 40px;
+    text-shadow: 1px 1px 2px black;
+
+  }
+  
+  /******************************* work *********************************/
+  .photo{
+    display:flex;
+    flex-wrap:wrap;
+  }
+  
+  .photo li{
+    padding:15px;
+  }
+  
+  /******************************* service*********************************/
+  #service{
+    text-align:center;
+    background:#f2f2f2;
+    padding:20px 10px;
+  }
+  
+  .service{
+    margin:30px 0
+  }
+  .service i{
+    font-size:25px;
+    color:rgb(54, 166, 210)
+  }
+  
+  .service h4,h1{
+    margin:15px 0
+  }
+  
+  hr{
+    width:250px;
+    height:2px;
+    margin:20px auto;
+    background-color: #2196F3;
+    border:none;
+  }
+  
+  /********************************* foooter **********************/
+  footer {
+    display: flex;
+      color: #fff;
+      background-color: #414a4f;
+      padding:20px;
+  }
+  
+  .social-media-icons {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; 
+  }
+  
+  .social-media-icons li {
+    margin-right: 10px; 
+  }
+  
+  /* Style for the Font Awesome icons */
+  .social-media-icons li a {
+    color: #333;
+    font-size: 24px;
+    transition: color 0.3s ease-in-out; 
+  }
+  
+  .social-media-icons li a:hover {
+    color: #007bff; 
+  }
+  
+  
+  /***************** VERSION DESKTOP ******************/
+  
+  @media only screen and (min-width: 700px) {
+    /****** home ********/
+    header,.menu{
+      display:flex;
+      align-items:center;
+    }
+    .topbar{
+      width:20%
+    }
+    
+    .menu{
+      width: 80%;
+      justify-content: flex-end;
+      padding-right: 20px;
+    }
+    .menu li{
+      margin:0 15px
+    }
+    .toggle-button{
+      display:none
+    }
+    
+    /****** work ********/
+    .photo li:nth-child(1){
+      flex:1 40%
+    }
+    .photo li:nth-child(2){
+      flex:1 60%
+    }
+    .photo li:nth-child(3){
+      flex:1 55%
+    }
+    .photo li:nth-child(4){
+      flex:1 45%
+    }
+    /****** service ********/
+    .wraper{
+      display:flex
+    }
+    .service{
+      padding:0 15px;
+    }
+  }
+
+
+
+  /* FORM Reservation */
+
+  .intro .container{
+      width: 100%;
+      padding: 2rem;
+      overflow: hidden;
+  }
+  
+.intro .field{
+  border-radius:25px;
+	width: 95%;
+	border: 2px solid rgba(0, 0, 0, 0);
+	outline: none;
+	background-color: rgba(230, 230, 230, 0.6);
+	padding: 0.5rem 1rem;
+	font-size: 1.1rem;
+	margin-bottom: 20px;
+}
+
+::placeholder { 
+  color: #1c1b1b;
+}
+  
+
+.intro .btn{
+    border: 5px solid white;
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    outline: none;
+    border-radius:25px;
+    background: transparent;
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+}
+
+/* menu Styling */
+
+.section-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 20px;
+}
+
+.hibachi-menu {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.menu-item {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.drinks-item {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.drinks-section {
+  flex: 1;
+  padding-left: 20px;
+}
+
+
+.intro h2{
+  text-decoration: underline;
+  padding-bottom: 15px;
+}
+
